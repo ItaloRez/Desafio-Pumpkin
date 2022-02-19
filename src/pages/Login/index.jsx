@@ -1,7 +1,7 @@
-import { useRef } from 'react'
-import './login.css'
+import React, { useRef } from 'react'
 import { useUser } from '../../contexts/User'
 import { useNavigate } from "react-router-dom"
+import './index.css'
 
 
 function App() {
@@ -19,7 +19,6 @@ function App() {
     else{
       alert('Por favor preencha todos os campos')
     }
-    
   }
 
   return (
@@ -28,16 +27,16 @@ function App() {
       <div className="quadrado">
         <h1>Login</h1>
       
-        <form onSubmit={handleSubmit}>
-          <div className="input">
-            <label>Usuário</label>
-            <input ref={userRef} type="text" placeholder="Insira o seu usuário"></input>
+        <form className='form' onSubmit={handleSubmit}>
+          <div className="inputs">
+            <label className='label'>Usuário</label>
+            <input className='input' ref={userRef} type="text" placeholder="Insira o seu usuário"></input>
           </div>
-          <div className="input">
-            <label>Senha</label>
-            <input ref={passwordRef} type="password" placeholder="Insira sua senha"></input>
+          <div className="inputs">
+            <label className='label'>Senha</label>
+            <input className='input' ref={passwordRef} type="password" placeholder="Insira sua senha"></input>
           </div>
-          <button type='submit'>Entrar</button>
+          <button className="btn" type='submit'>Entrar</button>
         </form>
       </div>
       </div>
